@@ -1,0 +1,10 @@
+version: '3'
+services:
+  fake-viber-api:
+    build: .
+    ports:
+      - "443:443"
+    volumes:
+      - ./ssl:/app/ssl
+    environment:
+      - NODE_ENV=production
